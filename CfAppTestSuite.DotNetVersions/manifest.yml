@@ -1,0 +1,6 @@
+---
+applications:
+- name: dotnet-versions
+  memory: 512M
+  buildpack: hwc_buildpack
+  stack: windows2012R2
