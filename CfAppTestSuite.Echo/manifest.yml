@@ -1,0 +1,6 @@
+﻿---
+applications:
+- name: test-echo
+  memory: 512M
+  env:
+    CACHE_NUGET_PACKAGES: false
