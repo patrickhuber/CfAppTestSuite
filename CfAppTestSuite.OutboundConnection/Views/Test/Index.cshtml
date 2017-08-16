@@ -1,0 +1,22 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Html Test</h2>
+@using (Html.BeginForm("Http", "Test", FormMethod.Get))
+{
+    <span>Url</span><br />
+    <input type="text" name="url" /><br />
+    <input type="submit" value="Test Http" />
+}
+
+<h2>Tcp Test</h2>
+@using (Html.BeginForm("Tcp", "Test", FormMethod.Get))
+{
+    <span>Host</span><br />    
+    <input type="text" name="host" /><br />
+    <span >Port</span><br />
+    <input type="number" name="port"/><br/>
+    <input type="submit" value="Test Tcp" />
+}

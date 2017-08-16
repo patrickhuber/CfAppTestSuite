@@ -1,0 +1,41 @@
+@model CfAppTestSuite.OutboundConnection.Models.HttpConnectionResult
+
+@{
+    ViewData["Title"] = "Http";
+}
+
+<h2>Http</h2>
+
+<div>
+    <h4>HttpConnectionResult</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Successful)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Successful)
+        </dd>
+        @if (Model.Successful)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+        }
+        else
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Exception)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Run another test.</a>
+</div>
