@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.RequestHeaders", "CfAppTestSuite.RequestHeaders\CfAppTestSuite.RequestHeaders.csproj", "{9DA5625F-6D61-4031-A0A8-F3C9307707C5}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.Echo", "CfAppTestSuite.Echo\CfAppTestSuite.Echo.csproj", "{1574A2D0-7FE7-4929-8F41-49DC2356D367}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.OutboundConnection", "CfAppTestSuite.OutboundConnection\CfAppTestSuite.OutboundConnection.csproj", "{11F277BB-21CC-44DF-8C55-399895B18FD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.DotNetCoreHttpsRedirect", "CfAppTestSuite.DotNetCoreHttpsRedirect\CfAppTestSuite.DotNetCoreHttpsRedirect.csproj", "{F96A7154-FE24-45DF-9BD6-5821D776A8FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{11F277BB-21CC-44DF-8C55-399895B18FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F277BB-21CC-44DF-8C55-399895B18FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F277BB-21CC-44DF-8C55-399895B18FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96A7154-FE24-45DF-9BD6-5821D776A8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96A7154-FE24-45DF-9BD6-5821D776A8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96A7154-FE24-45DF-9BD6-5821D776A8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96A7154-FE24-45DF-9BD6-5821D776A8FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
