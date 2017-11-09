@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CfAppTestSuite.DotNetCoreHttpsRedirect
+namespace CfAppTestSuite.AspNetCoreHttpsRedirect
 {
     /// <summary>
     /// <see cref="https://gist.github.com/mattwhetton/72d1cd532115e103600b6b6cfd5c50dc"/>

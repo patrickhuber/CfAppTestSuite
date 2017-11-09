@@ -1,0 +1,6 @@
+﻿---
+applications:
+- name: test-dotnet-core-https-redirect
+  memory: 512M
+  env:
+    CACHE_NUGET_PACKAGES: false
