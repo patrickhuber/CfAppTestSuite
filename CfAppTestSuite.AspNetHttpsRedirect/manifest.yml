@@ -1,6 +1,6 @@
 ﻿---
 applications:
-- name: test-aspnetcore-https-redirect
+- name: test-aspnet-https-redirect
   memory: 512M
   env:
     CACHE_NUGET_PACKAGES: false
