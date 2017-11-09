@@ -5,3 +5,4 @@ applications:
   env:
     CACHE_NUGET_PACKAGES: false
   buildpack: hwc_buildpack
+  stack: windows2012R2
