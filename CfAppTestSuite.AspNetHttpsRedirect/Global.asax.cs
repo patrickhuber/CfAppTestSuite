@@ -49,7 +49,7 @@ namespace CfAppTestSuite.AspNetHttpsRedirect
             //    return;
 
             var response = HttpContext.Current.Response;
-            response.RedirectPermanent($"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}//{request.Url.Authority}{request.Url.PathAndQuery}");
+            response.RedirectPermanent($"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}//{request.Url.Host}:443{request.Url.PathAndQuery}");
             context.ApplicationInstance.CompleteRequest();
         }
 
