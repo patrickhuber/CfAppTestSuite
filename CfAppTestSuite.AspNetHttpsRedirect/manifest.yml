@@ -6,3 +6,5 @@ applications:
     CACHE_NUGET_PACKAGES: false
   buildpack: hwc_buildpack
   stack: windows2012R2
+  health-check-type: http
+  health-check-http-endpoint: /
