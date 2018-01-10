@@ -7,3 +7,4 @@ applications:
     ASPNETCORE_ENVIRONMENT: Production
   health-check-type: http
   health-check-http-endpoint: /health
+  buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git#v1.0.33
