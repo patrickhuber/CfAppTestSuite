@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Routing;
 
 namespace CfAppTestSuite.AspNetCoreHttpsRedirect
 {
@@ -15,6 +16,7 @@ namespace CfAppTestSuite.AspNetCoreHttpsRedirect
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRouting();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,13 +26,58 @@ namespace CfAppTestSuite.AspNetCoreHttpsRedirect
             {
                 app.UseDeveloperExceptionPage();
             }
+            var routeBuilder = new RouteBuilder(app);
 
-            app.UseHttpsRedirect();
+            routeBuilder.MapGet("health", 
+                context => 
+                {
+                    return context.Response.WriteAsync("healthy");
+                });
+            routeBuilder.MapGet("{*url}", 
+                context=>
+                {
+                    // comment below if doing local development
+                    if(!env.IsDevelopment())
+                        EnforceHttps(context);
+                    return context.Response.WriteAsync("Hello World!");
+                });
 
-            app.Run(async (context) =>
+            var routes = routeBuilder.Build();
+
+            app.UseRouter(routes);
+        }
+
+        private static void EnforceHttps(HttpContext context)
+        {
+            var request = context.Request;
+            var response = context.Response;
+
+            if (request.IsHttps)
+                return;
+            
+            if (string.Equals(
+                request.Headers["X-Forwarded-Proto"],
+                Uri.UriSchemeHttps,
+                StringComparison.OrdinalIgnoreCase))
+                return;
+            
+            var httpsUri = GetHttpsUri(request);
+
+            response.Redirect(
+                location: httpsUri.ToString(),
+                permanent: true);
+        }
+
+        private static Uri GetHttpsUri(HttpRequest request)
+        {
+            var httpsUriBuilder = new UriBuilder
             {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                Scheme = Uri.UriSchemeHttps,
+                Host = request.Host.Host,
+                Path = request.Path,
+                Query = request.QueryString.ToUriComponent()
+            };
+            return httpsUriBuilder.Uri;
         }
     }
 }
