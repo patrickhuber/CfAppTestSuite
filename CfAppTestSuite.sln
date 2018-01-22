@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.RequestHeaders", "CfAppTestSuite.RequestHeaders\CfAppTestSuite.RequestHeaders.csproj", "{9DA5625F-6D61-4031-A0A8-F3C9307707C5}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CfAppTestSuite.AspNetHttpsRedirect", "CfAppTestSuite.AspNetHttpsRedirect\CfAppTestSuite.AspNetHttpsRedirect.csproj", "{B53B7D86-6F88-400E-AF5F-80B91459FEA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CfAppTestSuite.AspNetCoreHttpsRedirect", "CfAppTestSuite.AspNetCoreHttpsRedirect\CfAppTestSuite.AspNetCoreHttpsRedirect.csproj", "{9A5D44D5-B4D9-4967-8696-48E45B91CCC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CfAppTestSuite.NancyHttpsRedirect", "CfAppTestSuite.NancyHttpsRedirect\CfAppTestSuite.NancyHttpsRedirect.csproj", "{DA9FC6A2-060F-466C-AFED-5F407FD76CCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{9A5D44D5-B4D9-4967-8696-48E45B91CCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A5D44D5-B4D9-4967-8696-48E45B91CCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A5D44D5-B4D9-4967-8696-48E45B91CCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9FC6A2-060F-466C-AFED-5F407FD76CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9FC6A2-060F-466C-AFED-5F407FD76CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9FC6A2-060F-466C-AFED-5F407FD76CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9FC6A2-060F-466C-AFED-5F407FD76CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
