@@ -1,5 +1,4 @@
 ﻿using Nancy;
-using Nancy.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,6 @@ namespace CfAppTestSuite.NancyHttpsRedirect
     {
         public MainModule()
         {
-            this.RequiresHttps(redirect: true);
             Get["/"] = _ => "Hello World";
         }
     }
