@@ -43,6 +43,8 @@ namespace CfAppTestSuite.OutboundConnection.Controllers
             {
                 try
                 {
+                    client.SendTimeout = 1500;
+                    client.ReceiveTimeout = 1500;
                     await client.ConnectAsync(host, port);
                     tcpConnectionResult.Successful = true;
                 }
