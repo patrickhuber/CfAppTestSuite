@@ -1,0 +1,32 @@
+@model CfAppTestSuite.OutboundConnection.Models.TcpConnectionResult
+
+@{
+    ViewData["Title"] = "Tcp";
+}
+
+<h2>Tcp</h2>
+
+<div>
+    <h4>TcpConnectionResult</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Successful)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Successful)
+        </dd>
+        @if (!Model.Successful)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Exception)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Exception)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Run another test</a>
+</div>
